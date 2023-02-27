@@ -20,7 +20,19 @@ Cobra is a CLI library for Go that empowers applications.
 This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Calculate called")
+		//fmt.Println("Calculate called")
+		var opt int
+		fmt.Println("Select the Option for which you want to calculate the Carbon Equivalent : ")
+
+		fmt.Println("  1. Traditional Energy")
+		fmt.Println("  2. Car Travel.")
+		fmt.Println("  3. Flight.")
+		fmt.Println("  4. MotorBike.")
+		fmt.Println("  5. Public Transportation.")
+		fmt.Println("  6. Clean Energy.")
+
+		fmt.Println("\nEnter your Option : ")
+		fmt.Scanln(&opt)
 	},
 }
 
