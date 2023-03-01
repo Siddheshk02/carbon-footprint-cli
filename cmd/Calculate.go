@@ -69,6 +69,56 @@ to quickly create a Cobra application.`,
 			fmt.Scanln(&vehicle)
 			lib.CarTravel(dis, vehicle)
 
+		case 3:
+			var dis int
+			var flight string
+			fmt.Print("Enter the Distance Travelled (in KM) :")
+			fmt.Scanln(&dis)
+			fmt.Println("Select the Flight Type : ")
+			fmt.Println(" DomesticFlight ,           ShortEconomyClassFlight,")
+			fmt.Println(" ShortBusinessClassFlight , LongEconomyClassFlight,")
+			fmt.Println(" LongPremiumClassFlight ,   LongBusinessClassFlight,")
+			fmt.Println(" LongFirstClassFlight")
+			fmt.Print("Enter the Flight type(Name) : ")
+			fmt.Scanln(&flight)
+			lib.Flight(dis, flight)
+
+		case 4:
+			var dis int
+			var vehicle string
+			fmt.Print("Enter the Distance Travelled (in KM) :")
+			fmt.Scanln(&dis)
+			fmt.Println("Select the MotorBike Type : ")
+			fmt.Println(" SmallMotorBike , MediumMotorBike , LargeMotorBike")
+			fmt.Print("Enter the MotorBike type(Name) : ")
+			fmt.Scanln(&vehicle)
+			lib.MotorBike(dis, vehicle)
+
+		case 5:
+			var dis int
+			var vehicle string
+			fmt.Print("Enter the Distance Travelled (in KM) :")
+			fmt.Scanln(&dis)
+			fmt.Println("Select the Public Transportation Type : ")
+			fmt.Println(" Taxi ,   ClassicBus ,   EcoBus,")
+			fmt.Println(" Coach ,  NationalTrain, LightRail,")
+			fmt.Println(" Subway , FerryOnFoot,   FerryInCar")
+			fmt.Print("Enter the Public Transportation type(Name) : ")
+			fmt.Scanln(&vehicle)
+			lib.PublicTransportation(dis, vehicle)
+
+		case 6:
+			var en string
+			var con int
+			fmt.Println("Select the Energy type : ")
+			fmt.Println(" Solar ,   Wind ,      HydroElectric,")
+			fmt.Println(" Biomass , Geothermal , Tidal , OtherCleanEnergy")
+			fmt.Print("Enter the Energy type(Name) : ")
+			fmt.Scanln(&en)
+			fmt.Print("Enter the Consumption (in KWH) :")
+			fmt.Scanln(&con)
+			lib.CleanEnergy(en, con)
+
 		}
 
 	},
