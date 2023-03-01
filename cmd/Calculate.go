@@ -6,8 +6,14 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/Siddheshk02/Carbon-Footprint-CLI/lib"
 	"github.com/spf13/cobra"
 )
+
+// type Body struct {
+// 	first  int  `json:"carbonEquivalent"`
+// 	second bool `json:"success"`
+// }
 
 // CalculateCmd represents the Calculate command
 var CalculateCmd = &cobra.Command{
@@ -33,6 +39,38 @@ to quickly create a Cobra application.`,
 
 		fmt.Println("\nEnter your Option : ")
 		fmt.Scanln(&opt)
+
+		switch opt {
+		case 1:
+			var en int
+			var loc string
+			fmt.Print("Enter the Energy usage(KWH) :")
+			fmt.Scanln(&en)
+			fmt.Print("Enter the location (USA, Canada, UK, Europe, Africa, LatinAmerica, MiddleEast, OtherCountry):")
+			fmt.Scanln(&loc)
+			lib.Traditional(en, loc)
+
+		case 2:
+			var dis int
+			var vehicle string
+			fmt.Print("Enter the Distance Travelled (in KM) :")
+			fmt.Scanln(&dis)
+			fmt.Println("Select the Vehicle Type : ")
+			fmt.Println("  SmallDieselCar ,   MediumDieselCar,")
+			fmt.Println("  LargeDieselCar ,   MediumHybridCar,")
+			fmt.Println("  LargeHybridCar ,   MediumLPGCar,")
+			fmt.Println("  LargeLPGCar ,      MediumCNGCar,")
+			fmt.Println("  LargeCNGCar ,      SmallPetrolVan,")
+			fmt.Println("  LargePetrolVan ,   SmallDielselVan,")
+			fmt.Println("  MediumDielselVan , LargeDielselVan,")
+			fmt.Println("  LPGVan ,           CNGVan,")
+			fmt.Println("  SmallPetrolCar ,   MediumPetrolCar , LargePetrolCar")
+			fmt.Print("Enter the Vehicle type(Name) : ")
+			fmt.Scanln(&vehicle)
+			lib.CarTravel(dis, vehicle)
+
+		}
+
 	},
 }
 
