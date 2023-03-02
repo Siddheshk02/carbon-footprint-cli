@@ -233,15 +233,15 @@ func PublicTransportation(dis int, vehicle string) {
 
 }
 
-type Energy struct {
-	energy      string `json:"energy"`
-	consumption int    `json:"consumption"`
+type En struct {
+	Energy      string `json:"energy"`
+	Consumption int    `json:"consumption"`
 }
 
-func CleanEnergy(en string, con int) {
-	var Source Energy
-	Source.energy = en
-	Source.consumption = con
+func CleanEnergy(eng string, con int) {
+	var Source En
+	Source.Energy = eng
+	Source.Consumption = con
 
 	jsonReq, err := json.Marshal(Source)
 
