@@ -1,4 +1,4 @@
-# Use the official Golang image as a base
+# Use the official Golang image as the base image
 FROM golang:alpine
 
 # Set the working directory to /app
@@ -7,13 +7,11 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . /app
 
-# Build the application
-RUN go build .
+# Build the CLI binary
+RUN go build -o carbon-footprint-cli main.go
 
-# Expose port 8080
-EXPOSE 8080
+# Set the default command for the container to run the main command
+CMD ["./carbon-footprint-cli"]
 
-# Run the application
-CMD ["go run main.go", "go run main.go Calculate"]
-
- 
+# Define the second command as an entrypoint
+ENTRYPOINT ["./carbon-footprint-cli", "Calculate"]

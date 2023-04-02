@@ -30,7 +30,7 @@ var rootCmd = &cobra.Command{
 		emoji.Println(green("Calculating one's carbon footprint is a crucial step in understanding how our daily actions \t\nand choices impact the environment. :shamrock:"))
 		fmt.Println(yellow("\nUsing this tool we can raise awareness about the importance of reducing our greenhouse gas emissions \t\nand encourage people to take action towards a more sustainable lifestyle."))
 		fmt.Println(magenta("\nMoreover, with the growing concern over climate change and its impact on our planet, \t\nthere is a need for more tools and resources that can help individuals \t\nand businesses understand and reduce their carbon footprint."))
-		fmt.Println("\n")
+		fmt.Print("\n")
 		// content := "Calculating one's carbon footprint is a crucial step in understanding how our daily actions and choices impact the environment. Using this tool we can raise awareness about the importance of reducing our greenhouse gas emissions and encourage people to take action towards a more sustainable lifestyle. Moreover, with the growing concern over climate change and its impact on our planet, there is a need for more tools and resources that can help individuals and businesses understand and reduce their carbon footprint."
 		// fmt.Printf("%s\t\n\n", content)
 	},
